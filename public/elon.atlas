@@ -1,0 +1,41 @@
+
+elon.png
+size: 512,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+elon-musk-cutout/Background
+  rotate: false
+  xy: 221, 1
+  size: 171, 616
+  orig: 171, 616
+  offset: 0, 0
+  index: -1
+elon-musk-cutout/Layer_4
+  rotate: false
+  xy: 444, 1
+  size: 32, 45
+  orig: 32, 45
+  offset: 0, 0
+  index: -1
+elon-musk-cutout/Layer_3
+  rotate: false
+  xy: 1, 565
+  size: 194, 415
+  orig: 194, 415
+  offset: 0, 0
+  index: -1
+elon-musk-cutout/Layer_2
+  rotate: false
+  xy: 1, 1
+  size: 218, 562
+  orig: 218, 562
+  offset: 0, 0
+  index: -1
+elon-musk-cutout/Layer_5
+  rotate: false
+  xy: 394, 1
+  size: 48, 233
+  orig: 48, 233
+  offset: 0, 0
+  index: -1
