@@ -22,8 +22,8 @@ io.on('connection', function (socket) {
     // create a new player and add it to our players object
 	players[socket.id] = {
 	  rotation: 0,
-	  x: 100,//Math.floor(Math.random() * 700) + 50,
-	  y: Object.keys(players).length*100,//Math.floor(Math.random() * 500) + 50,
+	  x: 500,//Math.floor(Math.random() * 700) + 50,
+	  y: 515+Object.keys(players).length*100,//Math.floor(Math.random() * 500) + 50,
 	  playerId: socket.id,
 	  team: (Math.floor(Math.random() * 2) == 0) ? 'red' : 'blue'
 	};
@@ -32,7 +32,7 @@ io.on('connection', function (socket) {
 	// update all other players of the new player
 	socket.broadcast.emit('newPlayer', players[socket.id]);
 
-  console.log('a user connected');//, players);
+  console.log('a user connected', Object.keys(players).length);
   // when the client emits 'new message', this listens and executes
   socket.on('new message', function (data) {
     // we tell the client to execute 'new message'
@@ -91,7 +91,7 @@ io.on('connection', function (socket) {
     }
 
     delete players[socket.id];
-    console.log(socket.id+"left")
+    console.log(socket.id+" left")
     // emit a message to all players to remove this player
     io.emit('disconnect', socket.id);
 
@@ -100,7 +100,7 @@ io.on('connection', function (socket) {
 
   // when a player moves, update the player data
 	socket.on('playerMovement', function (movementData) {
-	   console.log(movementData)
+	  // console.log(movementData)
 	  players[socket.id].x = movementData.x;
 	  players[socket.id].y = movementData.y;
 	  players[socket.id].rotation = movementData.rotation;

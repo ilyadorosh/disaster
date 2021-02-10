@@ -265,4 +265,14 @@ $(function() {
   socket.on('stop typing', function (data) {
     removeChatTyping(data);
   });
+  
+  // socket.on('currentPlayers', function (players) {
+  //     Object.keys(players).forEach(function (id) {
+  //         if (players[id].playerId === socket.id) {
+  //             addPlayer(self, players[id]);
+  //             console.log("lol")
+  //         }
+  //     });
+  // });
+
 });
