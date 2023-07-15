@@ -1,25 +1,77 @@
-# disaster
+# Dashboards by Keen IO
 
+Building an analytics dashboard? Don’t start from scratch. Grab one of our Bootstrap-based templates and admire your data in minutes.
 
-- google earth traveling twitch
-- alternate game sound
-- colab gamedev in 1 hour
-  - Nathan for you 
-- wasd
+Begin with a layout:
 
-- real brands big companies pie size
-- circular topography gravity trajectory
-- [ ] integrate facebook, $
-- [ ] get $, build the robot
-order relay automatically report replace 
-- [ ] apply to Bosch, curevac
-- [ ] android dev
-- [ ] 2 resumes
-- [ ] resume data science 
-- [ ] ilyadorosh.github.io website clean
-- [ ] finish DW B1
-Christian Ullrich
-dead connectome - store feelings
-  RNA train Matthew Bayesian folding @home
-- [x] MgO
-- [x] cauliflower or honey or grass smoothie + probiotics ferment
+![Hero Thirds Example](http://cl.ly/image/3v2H180U0k0Q/Screen%20Shot%202014-10-29%20at%203.12.24%20AM.png)
+
+Add charts to each `chart-stage` HTML element:
+
+``` html
+<div class="col-sm-6 col-md-3">
+  <div class="chart-wrapper">
+    <div class="chart-title">
+      Chart Title
+    </div>
+    <div class="chart-stage">
+      <div id="grid-1-1">
+        <!-- chart goes here! -->
+      </div>
+    </div>
+    <div class="chart-notes">
+      Notes about this chart (optional)
+    </div>
+  </div>
+</div>
+```
+
+And voilà!
+
+![Sample Dashboard](http://cl.ly/image/1T3a0X402r0W/Screen%20Shot%202014-10-29%20at%203.35.04%20AM.png)
+
+An attractive, custom analytics dashboard that's ready to be shown to your team or your customers. No hours lost tweaking CSS or testing responsiveness on eight different mobile devices.
+
+## The Templates
+
+These layout templates are composed of a minimal set of [Bootstrap v3.2](http://getbootstrap.com/) custom styles. They cover the most common use cases and layout configurations we've encountered so far.
+
+* [Layouts](http://keen.github.io/dashboards/layouts/) for pre-built, responsive dashboard views
+* [Examples](http://keen.github.io/dashboards/examples/) for specific domains, data models and popular integrations
+
+## Integrations
+
+These templates can work with any data source or charting library, but they're particularly streamlined to work with Keen IO's [visualization toolkit](https://github.com/keenlabs/keen-js). To see the Keen integration in action, create a [free project](http://keen.io/signup?s=gh-dashboards) and send some data to it. Then add some charts to your dashboard with just a few lines of code.
+
+You can also use this pre-populated set of [demo data](https://github.com/keen/dashboards/tree/gh-pages/demo-data). 
+
+## Usage
+
+Ready to use one of these awesome layouts? Here's how to get started.
+
+1. [Remix this project](https://glitch.com/edit/#!/remix/keen-dashboards).
+
+2. Check out the various [layouts](http://keen-dashboards.glitch.me/layouts/) and pick the one that best suits your needs.
+
+3. Start editing! In the destination folder will exist an `.html` file. Open it. There are three things you need to do to edit your dashboard:
+  1. Setup: If you're a registered Keen IO user, navigate to [your keen project](http://keen.io/login?s=gh-dashboards) or if you don't have a user at first, you can simply use some demo data that we've prepared for you. You can access those by going to the repository and navigating to demo-data. There, you will see some javascript files with some code in them. We will simply paste those in the .html file.
+  2. Some copypasta. When you navigate to the bottom of the .html file, you can see that there are a bunch of script tags. Just before the end of the body tag, we're going to add in the code from sample.html. Simply copy and paste the code just before you see ```</body>```.
+  3. Once you've done that we need to hook up the specific items within the template to the code that we've just pasted in to our file. In line 21 of sample.html, you will see a line of code: ```document.getElementById('chart-01')```. That means that this *query* will try to find inside the html file a node with an id of 'chart-01'. In these templates, you will see lines of that resemble something like:
+  ```html
+  <div class="chart-stage"> <!-- This is where you need to put the id property in! -->
+    <img data-src="holder.js/100%x650/white">
+  </div>
+  ```
+  Now we're going to change those lines so that it looks like this:
+  ```html
+  <div class="chart-stage" id="chart-01"> <!-- This is where you need to put the id property in! -->
+    <!-- Get rid of that img tag! -->
+  </div>
+  ```
+
+You're finished! Congratulations on setting up your first chart! Repeat step three with the rest of the items in the template to complete your dashboard!
+
+## Support
+
+Need a hand with something? Send us an email to [contact@keen.io](mailto:contact@keen.io) and we'll get back to you right away!
+For technical questions, use the [`keen-io`](https://stackoverflow.com/questions/tagged/keen-io) tag on Stack Overflow.
